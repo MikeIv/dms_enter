@@ -1,5 +1,14 @@
-@import 'base/*.scss';
+// Global
 @import 'global/*.scss';
-@import '../components/**/*.scss';
-@import '**/_*.scss';
 
+// Parts
+@import "parts/page";
+@import "parts/header";
+@import "parts/main";
+@import "parts/footer";
+
+@import "parts/vue";
+
+
+// Project (DMS)
+@import "project/dms_entry";

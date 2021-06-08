@@ -58,3 +58,19 @@
 	padding: 0 #{$padding};
 	margin: 0 auto;
 }
+
+
+
+// Font-size
+
+@mixin vue-h3 {
+	font-size: 2rem;
+	font-weight: normal;
+	line-height: 1.25;
+}
+
+@mixin vue-h4 {
+	font-size: 1.8rem;
+	font-weight: bold;
+	line-height: 1.25;
+}
