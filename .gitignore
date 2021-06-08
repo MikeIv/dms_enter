@@ -6,6 +6,8 @@ process.json
 
 tasks/ftp_settings.json
 
-/.idea
+.idea/
 
-/build
+*.log
+
+build/
