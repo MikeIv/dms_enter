@@ -4,7 +4,7 @@ const {
 	src,
 	dest
 } = require('gulp');
-const sass = require('gulp-sass');
+const sass = require('gulp-dart-sass');
 const concat = require('gulp-concat');
 const map = require('gulp-sourcemaps');
 const chalk = require('chalk');

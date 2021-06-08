@@ -8,7 +8,7 @@ const connect = ftp.create(ftpSettings);
 
 module.exports = function deploy() {
 	return src(['build/**/*.*', '!build/**/*.map'])
-		.pipe(connect.newer('public_html/'))
-		.pipe(connect.dest('public_html/'))
+		.pipe(connect.newer('open-test.ru/'))
+		.pipe(connect.dest('open-test.ru/'))
 		.on('end', () => console.log(`Finished deploing ./build to https://${chalk.blueBright(ftpSettings.host)}`))
 }
