@@ -1,0 +1,6 @@
+{
+  "host": "myhost",
+  "user": "mike",
+  "pass": "*******",
+  "parallel": 10
+}
