@@ -4,15 +4,67 @@
 
   width: 100%;
 
-  background-color: $lightgray;
+  font-family: $mainFont;
+
 }
 
 .header__wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   width: 100%;
+  height: 100%;
 
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+
+// left col
+.header__call {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 4rem;
+  height: 4rem;
+}
+
+.header__icon-call {
+  width: 4rem;
+
+  fill: $darkgray;
+}
+
+
+.header__icon-call:hover {
+  fill: $gray;
+}
+
+svg path {
+  fill: inherit;
+}
+
+
+// right col
+.header__lang-block {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-shrink: 1;
+
+  border: none;
+  cursor: pointer;
+
+}
+
+.header__lang-img {
+  margin-right: 0.6rem;
+}
+
+.header__lang-txt {
+  font-size: $s-Fs;
+  font-weight: 300;
+  color: $black;
 }
