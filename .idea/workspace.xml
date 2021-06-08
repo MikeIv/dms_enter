@@ -1,10 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="c610f9af-d698-447a-a30e-202a68af93ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tasks/ftp_settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/tasks/ftp_settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +36,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1tecbyespHflyieTssDKStiJEDC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -32,6 +53,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -42,18 +64,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1623133071461</updated>
-      <workItem from="1623133073376" duration="6543000" />
+      <workItem from="1623133073376" duration="7876000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
-    <state x="1174" y="485" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623133468195">
+    <state x="1174" y="485" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1623140012688">
       <screen x="0" y="23" width="2560" height="1366" />
     </state>
-    <state x="1174" y="485" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1366@0.23.2560.1366" timestamp="1623133468195" />
+    <state x="1174" y="485" key="#com.intellij.fileTypes.FileTypeChooser/0.23.2560.1366@0.23.2560.1366" timestamp="1623140012688" />
     <state x="488" y="124" width="1952" height="1112" key="DiffContextDialog" timestamp="1623139941605">
       <screen x="0" y="23" width="2560" height="1366" />
     </state>
@@ -74,5 +107,9 @@
       <screen x="0" y="23" width="2560" height="1366" />
     </state>
     <state width="2110" height="360" key="GridCell.Tab.0.right/0.23.2560.1366@0.23.2560.1366" timestamp="1623133855011" />
+    <state x="965" y="319" key="SettingsEditor" timestamp="1623140968965">
+      <screen x="0" y="23" width="2560" height="1366" />
+    </state>
+    <state x="965" y="319" key="SettingsEditor/0.23.2560.1366@0.23.2560.1366" timestamp="1623140968965" />
   </component>
 </project>
