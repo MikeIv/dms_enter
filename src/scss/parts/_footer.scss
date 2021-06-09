@@ -1,0 +1,26 @@
+.footer {
+  grid-area: footer;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100%;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
+}
+
+.footer__link {
+  font-size: $s-Fs;
+  color: $base;
+
+  text-decoration: none;
+}
