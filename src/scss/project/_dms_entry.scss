@@ -12,6 +12,16 @@
   box-sizing: border-box;
 
   font-family: $mainFont;
+
+  @media screen and (min-width: 480px) {
+    width: 42rem;
+
+    margin: 0 auto;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 100%;
+  }
 }
 
 
@@ -27,6 +37,10 @@
 .dms_entry__logo {
   margin-top: auto;
   margin-bottom: auto;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .dms_entry__form {
@@ -124,7 +138,8 @@
 
   width: 100%;
 
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
+  padding: 0;
 }
 
 .dms_entry__socials-h2 {
