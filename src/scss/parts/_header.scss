@@ -122,5 +122,13 @@ svg path {
   color: $base;
   text-transform: uppercase;
   text-decoration: none;
+
+  &:hover {
+    color: $blue;
+  }
+
+  &--gray {
+    color: $darkgray;
+  }
 }
 

@@ -10,7 +10,7 @@ const bs = require('browser-sync');
 const plumber = require('gulp-plumber');
 
 module.exports = function rastr() {
-	return src('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
+	return src('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|ico)')
 		.pipe(plumber())
 		.pipe(changed('build/img'))
 		.pipe(imagemin({

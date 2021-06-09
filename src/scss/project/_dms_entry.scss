@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-grow: 1;
 
   width: 100%;
-  height: calc(100vh - 9.6rem);
 
   padding-left: 2rem;
   padding-right: 2rem;
@@ -32,6 +32,7 @@
   justify-content: flex-start;
 
   width: 100%;
+  margin-bottom: auto;
 }
 
 .dms_entry__logo {
@@ -43,6 +44,14 @@
   }
 }
 
+.dms_entry__h2 {
+  margin-top: 3.6rem;
+  margin-bottom: 3.6rem;
+  text-align: center;
+  font-size: $mainFs;
+  color: $base;
+}
+
 .dms_entry__form {
   display: flex;
   flex-wrap: wrap;
@@ -51,6 +60,7 @@
 }
 
 .dms_entry__input {
+  position: relative;
   width: 100%;
   height: 5rem;
 
@@ -71,6 +81,13 @@
     font-size: $mainFs;
     font-weight: 300;
     color: $gray;
+  }
+
+  &--tel:before {
+    position: absolute;
+    content: 'Номер телефона';
+    top: 0;
+    left: 0;
   }
 }
 
@@ -138,7 +155,7 @@
 
   width: 100%;
 
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   padding: 0;
 }
 

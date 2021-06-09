@@ -7,7 +7,7 @@ const ttf2woff2 = require('gulp-ttftowoff2');
 const ttf2woff = require('gulp-ttf2woff');
 
 module.exports = function ttf(done) {
-	src('src/fonts/**/*.ttf')
+	src('src/assets/fonts/**/*.ttf')
 		.pipe(changed('build/fonts', {
 			extension: '.woff2',
 			hasChanged: changed.compareLastModifiedTime
@@ -15,7 +15,7 @@ module.exports = function ttf(done) {
 		.pipe(ttf2woff2())
 		.pipe(dest('build/fonts'))
 
-	src('src/fonts/**/*.ttf')
+	src('src/assets/fonts/**/*.ttf')
 		.pipe(changed('build/fonts', {
 			extension: 'woff',
 			hasChanged: changed.compareLastModifiedTime

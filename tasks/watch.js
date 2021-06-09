@@ -10,9 +10,9 @@ module.exports = function watching() {
 	watch('src/**/*.scss', parallel('style'));
 	watch('src/**/*.js', parallel('dev_js'));
 	watch('src/**/*.json', parallel('html'));
-	watch('src/img/**/*.+(png|jpg|jpeg|gif|svg|ico)', parallel('rastr'));
+	watch('src/assets/img/**/*.+(png|jpg|jpeg|gif|svg|ico)', parallel('rastr'));
 	watch('build/img/**/*.+(png|jpg|jpeg)', parallel('webp'));
-	watch('src/svg/css/**/*.svg', series('svg_css', 'style'));
-	watch('src/svg/sprite/**/*.svg', series('svg_sprite', 'rastr'));
-	watch('src/fonts/**/*.ttf', series('ttf', 'fonts'));
+	watch('src/assets/svg/css/**/*.svg', series('svg_css', 'style'));
+	watch('src/assets/svg/sprite/**/*.svg', series('svg_sprite', 'rastr'));
+	watch('src/assets/fonts/**/*.ttf', series('ttf', 'fonts'));
 }
