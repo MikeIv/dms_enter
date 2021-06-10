@@ -10,14 +10,19 @@
   <meta name="keywords"
         content="DMS">
   <link rel="shortcut icon"
+        href="../assets/img/favicons/favicon.svg"
+        type="image/svg+xml">
+  <link rel="shortcut icon"
+        href="../assets/img/favicons/favicon.webp"
+        type="image/webp">
+  <link rel="shortcut icon"
         href="../assets/img/favicons/favicon.png"
         type="image/x-icon">
   <link rel="stylesheet"
         href="../css/libs.min.css?v=2">
   <link rel="stylesheet"
         href="../css/style.min.css?v=2">
-  <script src="https://unpkg.com/vue"></script>
-  <title>Регистрация</title>
+  <title>Подтверждение</title>
 </head>
 <body class="page__body">
 <!-- inline svg sprite -->
@@ -54,36 +59,24 @@
 <!-- ================= -->
 
 <main class="main">
-  <section id="reg" class="dms_entry  dms_entry--pb">
-    <h1 class="dms_entry__h1 v-hidden">Страница регистрации</h1>
+  <section class="dms_entry  dms_entry--pb">
+    <h1 class="dms_entry__h1 v-hidden">Страница подтверждения</h1>
     <a href="#" class="dms_entry__logo">
       <img src="/img/logo-DMS.svg" alt="логотип системы" class="dms_entry__logo-img">
     </a>
 
     <div class="dms_entry__entry-block">
-      <h2 class="dms_entry__h2">Регистрация</h2>
-      <form action="" class="dms_entry__form" @submit.prevent="">
+      <div class="dms_entry__info-block">На ваш телефон
+        +74958310831
+        был отправлен код подтверждения аккаунта.
+        Если код не пришел, запросите код повторно. </div>
+      <form action="" class="dms_entry__form">
         <div class="dms_entry__input-wrapper">
-          <input type="text" class="dms_entry__input dms_entry__input--tel" placeholder="+7 (___) ___ - __ - __">
+          <input type="text" class="dms_entry__input dms_entry__input--tel" placeholder="Код">
         </div>
 
-        <div class="dms_entry__check-block">
-          <div class="dms_entry__check-line">
-            <input type="checkbox" class="dms_entry__check">
-            <div class="dms_entry__check-info">
-              <span class="dms_entry__check-txt">Согласен на</span>
-              <a href="#" class="dms_entry__check-link">обработку персональных данных.</a>
-            </div>
-          </div>
-          <div class="dms_entry__check-line">
-            <input type="checkbox" class="dms_entry__check" checked>
-            <div class="dms_entry__check-info">
-              <span class="dms_entry__check-txt">Согласен c</span>
-              <a href="#" class="dms_entry__check-link">правилами сервиса.</a>
-            </div>
-          </div>
-        </div>
-        <button class="dms_entry__form-btn btn">Зарегистрироваться</button>
+
+        <button class="dms_entry__form-btn btn">Подтвердить</button>
       </form>
     </div>
   </section>
@@ -96,15 +89,5 @@
   </div>
 </footer>
 
-
-
-<script>
-  var reg = new Vue({
-    el: '#reg',
-    data: {
-      title: ''
-    }
-  })
-</script>
 </body>
 </html>

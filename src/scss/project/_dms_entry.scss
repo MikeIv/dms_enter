@@ -13,6 +13,10 @@
 
   font-family: $mainFont;
 
+  &--pb {
+    padding-bottom: 10rem;
+  }
+
   @media screen and (min-width: 480px) {
     width: 42rem;
 
@@ -33,6 +37,10 @@
 
   width: 100%;
   margin-bottom: auto;
+
+  @media screen and (min-width: 768px) {
+    margin: 0;
+  }
 }
 
 .dms_entry__logo {
@@ -45,7 +53,7 @@
 }
 
 .dms_entry__h2 {
-  margin-top: 3.6rem;
+  margin-top: 2rem;
   margin-bottom: 3.6rem;
   text-align: center;
   font-size: $mainFs;
@@ -59,13 +67,42 @@
   width: 100%;
 }
 
+.dms_entry__input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0;
+  margin-top: 0.8rem;
+  margin-bottom: 0.8rem;
+  padding: 0;
+
+  &:before {
+    position: absolute;
+    content: 'Номер телефона';
+    top: -0.6rem;
+    left: 1rem;
+
+    width: 11rem;
+    height: 2rem;
+
+    text-align: center;
+    font-size: $xxs-Fs;
+    color: $darkgray;
+
+    background-color: $white;
+
+    z-index: 1;
+  }
+}
+
 .dms_entry__input {
   position: relative;
   width: 100%;
   height: 5rem;
 
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
   padding-left: 2rem;
   padding-right: 2rem;
   box-sizing: border-box;
@@ -77,18 +114,16 @@
   border: 1px solid $gray;
   border-radius: 0.3rem;
 
+  &--mb {
+    margin-bottom: 1.6rem;
+  }
+
   &::placeholder {
     font-size: $mainFs;
     font-weight: 300;
     color: $gray;
   }
 
-  &--tel:before {
-    position: absolute;
-    content: 'Номер телефона';
-    top: 0;
-    left: 0;
-  }
 }
 
 .dms_entry__input-pass {
@@ -99,7 +134,7 @@
 .dms_entry__input-icon {
   display: none;
   position: absolute;
-  top: 1.3rem;
+  top: 0.5rem;
   right: 1rem;
 
   cursor: pointer;
@@ -144,6 +179,54 @@
   }
 
 }
+
+
+// Check block
+.dms_entry__check-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  width: 100%;
+
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.dms_entry__check-line {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 0.8rem;
+}
+
+.dms_entry__check {
+  width: 2rem;
+  height: 2rem;
+
+  margin-right: 1.4rem;
+  border-color: $gray;
+}
+
+.dms_entry__check-info {
+  display: flex;
+  align-items: center;
+
+  font-size: $xxs-Fs;
+}
+
+.dms_entry__check-txt {
+  margin-right: 0.5rem;
+  color: $darkgray;
+}
+
+.dms_entry__check-link {
+  color: $base;
+}
+
+
 
 
 // Socials block
