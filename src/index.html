@@ -51,7 +51,7 @@
 
     <div class="dms_entry__entry-block">
       <form action="" class="dms_entry__form" @submit.prevent="submitForm">
-        <input type="text" class="dms_entry__input dms_entry__input--mb" placeholder="Телефон или email"
+        <input type="email" class="dms_entry__input dms_entry__input--mb" placeholder="Телефон или email"
                v-model="formInfo.email" required>
         <div class="dms_entry__input-pass">
           <input type="text" class="dms_entry__input" placeholder="Пароль" v-model="formInfo.pass" required>
@@ -96,6 +96,8 @@
 
 <script>
 
+
+
   var app = new Vue({
     el: '#modal',
     data: {
@@ -115,6 +117,15 @@
           this.formInfo.pass = ''
       }
 
+    },
+    validations: {
+      email: {
+        required,
+        minLength: minLength(4)
+      },
+      pass: {
+        required
+      }
     }
   })
 

@@ -1,5 +1,5 @@
 {
-  "name": "Easy-webdev-startpack",
+  "name": "Gulp-extended",
   "version": "3.0.0",
   "description": "HTML5+CSS3 template for easy start website project'",
   "main": "gulpfile.js",
@@ -45,6 +45,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vuelidate": "^0.7.6"
   }
 }
