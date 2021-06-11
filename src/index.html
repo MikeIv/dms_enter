@@ -96,9 +96,18 @@
 
 <script>
 
+  import useVuelidate from '@vuelidate/core'
+  import { required, email } from '@vuelidate/validators'
+
+
 
 
   var app = new Vue({
+
+    setup () {
+      return { v$: useVuelidate() }
+    },
+
     el: '#modal',
     data: {
       title: '',
