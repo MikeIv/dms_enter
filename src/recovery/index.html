@@ -22,7 +22,7 @@
         href="../css/libs.min.css?v=2">
   <link rel="stylesheet"
         href="../css/style.min.css?v=2">
-  <title>Подтверждение</title>
+  <title>Восстановление</title>
 </head>
 <body class="page__body">
 <!-- inline svg sprite -->
@@ -66,22 +66,16 @@
     </a>
 
     <div class="dms_entry__entry-block">
-      <div class="dms_entry__info-block">
-        <span class="dms_entry__info-txt">На ваш телефон</span>
-        <span class="dms_entry__info-txt dms_entry__info-txt--size">+74958310831</span>
-        <span class="dms_entry__info-txt">был отправлен код подтверждения аккаунта. <br>
-          Если код не пришел, запросите код повторно. </span>
-      </div>
+      <h2 class="dms_entry__h2">Регистрация</h2>
+
       <form action="" class="dms_entry__form">
-        <div class="dms_entry__input-wrapper dms_entry__input-wrapper--code">
-          <input type="text" class="dms_entry__input" placeholder="Код">
+        <div class="dms_entry__input-wrapper">
+          <input type="text" class="dms_entry__input dms_entry__input--tel" placeholder="Код">
         </div>
-
-        <p class="dms_entry__timer-line">Отправить код повторно через — <span class="dms_entry__timer">2:59</span></p>
-
-
-        <button class="dms_entry__form-btn btn">Подтвердить</button>
+        <a href="/confirm" class="dms_entry__form-btn btn dms_entry__form-btn--mt dms_entry__form-btn--link">Подтвердить
+        </a>
       </form>
+
     </div>
   </section>
 </main>

@@ -45,6 +45,7 @@
     "vinyl-ftp": "^0.6.1"
   },
   "dependencies": {
+    "@vue/composition-api": "*",
     "@vuelidate/core": "*",
     "@vuelidate/validators": "*",
     "vue": "^2.6.14",

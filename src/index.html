@@ -51,14 +51,22 @@
 
     <div class="dms_entry__entry-block">
       <form action="" class="dms_entry__form" @submit.prevent="submitForm">
-        <input type="email" class="dms_entry__input dms_entry__input--mb" placeholder="Телефон или email"
-               v-model="formInfo.email" required>
+        <div class="dms_entry__input-block" :class="{ error: v$.email.$errors.length }">
+          <input type="text" class="dms_entry__input dms_entry__input--mb"
+                                             placeholder="Телефон или email"
+                  v-model="formInfo.email"
+                  v-bind="email"
+                 :class="{errorInput: v$.email.$error }"
+                 @blur="v$.name.$touch"
+                 required>
+          <p class="dms_entry__input-error" v-if="v$.email.$error">Ошибка</p>
+        </div>
         <div class="dms_entry__input-pass">
-          <input type="text" class="dms_entry__input" placeholder="Пароль" v-model="formInfo.pass" required>
+          <input type="text" class="dms_entry__input" placeholder="Пароль" required>
           <img src="/img/icon-close-eye.svg" alt="отображение пароля" class="dms_entry__input-icon active">
           <img src="/img/icon-eye.svg" alt="отображение пароля" class="dms_entry__input-icon">
         </div>
-        <a href="#" class="dms_entry__pass-link">Напомнить пароль?</a>
+        <a href="/recovery" class="dms_entry__pass-link">Напомнить пароль?</a>
         <button class="dms_entry__form-btn btn">Войти</button>
       </form>
 
@@ -130,7 +138,6 @@
     validations: {
       email: {
         required,
-        minLength: minLength(4)
       },
       pass: {
         required

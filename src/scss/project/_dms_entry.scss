@@ -60,12 +60,92 @@
   color: $base;
 }
 
+.dms_entry__info-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+
+  margin-bottom: 2rem;
+}
+
+.dms_entry__info-txt {
+  text-align: center;
+  font-size: $xxs-Fs;
+  line-height: $mainFs;
+  color: $darkgray;
+
+  &--size {
+    font-size: $s-Fs;
+    font-weight: 500;
+    color: $base;
+  }
+}
+
+.dms_entry__timer-line {
+  width: 100%;
+
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+
+  text-align: center;
+  font-size: $mainFs;
+  font-weight: 300;
+  line-height: $mainFs;
+  color: $darkgray;
+}
+
 .dms_entry__form {
   display: flex;
   flex-wrap: wrap;
 
   width: 100%;
 }
+
+.dms_entry__input-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  &:focus-within:before {
+    position: absolute;
+    content: 'Номер телефона или email';
+    top: -0.6rem;
+    left: 1rem;
+
+    width: 18rem;
+    height: 2rem;
+
+    text-align: center;
+    font-size: $xxs-Fs;
+    color: $darkgray;
+
+    background-color: $white;
+
+    z-index: 1;
+  }
+}
+
+.dms_entry__input-error {
+  position: absolute;
+  bottom: 0.7rem;
+  left: 1rem;
+
+  width: 20rem;
+
+  color: $red;
+
+  z-index: 1;
+}
+
+
 
 .dms_entry__input-wrapper {
   position: relative;
@@ -96,6 +176,12 @@
 
     z-index: 1;
   }
+
+  &--code:before {
+    content: 'Код';
+
+    width: 4rem;
+  }
 }
 
 .dms_entry__input {
@@ -115,7 +201,7 @@
   border-radius: 0.3rem;
 
   &--mb {
-    margin-bottom: 1.6rem;
+    margin-bottom: 2rem;
   }
 
   &::placeholder {
@@ -126,9 +212,29 @@
 
 }
 
+
+
 .dms_entry__input-pass {
   position: relative;
   width: 100%;
+
+  &:focus-within:before {
+    position: absolute;
+    content: 'Пароль';
+    top: -0.6rem;
+    left: 1rem;
+
+    width: 6rem;
+    height: 2rem;
+
+    text-align: center;
+    font-size: $xxs-Fs;
+    color: $darkgray;
+
+    background-color: $white;
+
+    z-index: 1;
+  }
 }
 
 .dms_entry__input-icon {
@@ -176,6 +282,18 @@
 
   &:hover {
     background-color: $baseHover;
+  }
+
+  &--mt {
+    margin-top: 2rem;
+  }
+
+  &--link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
   }
 
 }
