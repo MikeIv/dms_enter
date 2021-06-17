@@ -70,6 +70,14 @@ input {
 	font-family: inherit;
 }
 
+a,
+button,
+input {
+	&:focus {
+		outline: 1px solid #2981D9;
+	}
+}
+
 ul {
 	margin: 0;
 	padding: 0;

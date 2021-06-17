@@ -210,6 +210,19 @@
     color: $gray;
   }
 
+  &:focus {
+    border-color: $blue;
+
+  }
+
+  &:focus-visible {
+    border-color: $blue;
+  }
+
+  &:active {
+    border-color: $blue;
+  }
+
 }
 
 
@@ -238,16 +251,21 @@
 }
 
 .dms_entry__input-icon {
-  display: none;
   position: absolute;
   top: 0.5rem;
   right: 1rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  background-image: url("/img/icon-close-eye.svg");
+  background-size: cover;
 
   cursor: pointer;
 }
 
 .dms_entry__input-icon.active {
-  display: block;
+  background-image: url("/img/icon-eye.svg");
 }
 
 .dms_entry__pass-link {

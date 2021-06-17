@@ -51,23 +51,22 @@
 
     <div class="dms_entry__entry-block">
       <form action="" class="dms_entry__form" @submit.prevent="submitForm">
-        <div class="dms_entry__input-block" :class="{ error: v$.email.$errors.length }">
+        <div class="dms_entry__input-block">
           <input type="text" class="dms_entry__input dms_entry__input--mb"
                                              placeholder="Телефон или email"
                   v-model="formInfo.email"
-                  v-bind="email"
-                 :class="{errorInput: v$.email.$error }"
-                 @blur="v$.name.$touch"
-                 required>
-          <p class="dms_entry__input-error" v-if="v$.email.$error">Ошибка</p>
+
+                 required oninput="validateComments(this)">
+<!--          <p class="dms_entry__input-error" v-if="">Ошибка</p>-->
         </div>
         <div class="dms_entry__input-pass">
-          <input type="text" class="dms_entry__input" placeholder="Пароль" required>
-          <img src="/img/icon-close-eye.svg" alt="отображение пароля" class="dms_entry__input-icon active">
-          <img src="/img/icon-eye.svg" alt="отображение пароля" class="dms_entry__input-icon">
+          <input :type="show ? 'text' : 'password'" class="dms_entry__input"  placeholder="Пароль"
+                 v-model="formInfo.pass"
+                 required>
+          <span class="dms_entry__input-icon" :class="{ active: show }" @click="show = !show"></span>
         </div>
         <a href="/recovery" class="dms_entry__pass-link">Напомнить пароль?</a>
-        <button class="dms_entry__form-btn btn">Войти</button>
+        <button class="dms_entry__form-btn btn" type="submit">Войти</button>
       </form>
 
       <section class="dms_entry__socials">
@@ -98,52 +97,61 @@
     </div>
 
   </section>
+
 </main>
 @@include('components/page-blocks/_footer.html')
 @@include('components/page-blocks/_scripts.html')
 
 <script>
 
-  import useVuelidate from '@vuelidate/core'
-  import { required, email } from '@vuelidate/validators'
+  Vue.prototype.$appName = 'Моё приложение';
+
+  function validateComments(input) {
+    if (input.value.length < 6) {
+      input.setCustomValidity("Поле должно содержать более 6 символов");
+    }
+    else {
+      // Длина комментария отвечает требованию,
+      // поэтому очищаем сообщение об ошибке
+      input.setCustomValidity("");
+    }
+  }
 
 
+  new Vue({
 
-
-  var app = new Vue({
-
-    setup () {
-      return { v$: useVuelidate() }
+    beforeCreate: function () {
+      console.log(this.$appName);
     },
 
     el: '#modal',
     data: {
       title: '',
+      type: 'password',
+      show: false,
       formInfo: {
         email: '',
         pass: ''
-      }
+      },
     },
     methods: {
       submitForm () {
           console.log({
             email:  this.formInfo.email,
-            pass: this.formInfo.pass
+            pass: this.formInfo.pass,
           })
           this.formInfo.email = '',
           this.formInfo.pass = ''
-      }
-
-    },
-    validations: {
-      email: {
-        required,
       },
-      pass: {
-        required
+
+      showInput () {
+        return show = this.show
       }
-    }
+    },
+
   })
+
+
 
 </script>
 </body>
