@@ -23,6 +23,17 @@
   <link rel="stylesheet"
         href="../css/style.min.css?v=2">
   <title>Подтверждение</title>
+
+  <script type="text/javascript">
+    var timestamp = (new Date()).getTime();
+    var headID = document.getElementsByTagName("head")[0];
+    var cssNode = document.createElement('link');
+    cssNode.type = 'text/css';
+    cssNode.rel = 'stylesheet';
+    cssNode.href = 'css/style.min.css' + '?v=' + timestamp;
+    cssNode.media = 'screen';
+    headID.appendChild(cssNode);
+  </script>
 </head>
 <body class="page__body">
 <!-- inline svg sprite -->
@@ -80,7 +91,7 @@
         <p class="dms_entry__timer-line">Отправить код повторно через — <span class="dms_entry__timer">2:59</span></p>
 
 
-        <button class="dms_entry__form-btn btn">Подтвердить</button>
+        <a href="/" class="dms_entry__form-btn btn dms_entry__form-btn--link">Подтвердить</a>
       </form>
     </div>
   </section>

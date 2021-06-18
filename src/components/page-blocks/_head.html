@@ -18,10 +18,22 @@
 				href="@@favicon.png"
 				type="image/x-icon">
 	<link rel="stylesheet"
-				href="css/libs.min.css?v=2">
-	<link rel="stylesheet"
-				href="css/style.min.css?v=2">
+				href="css/libs.min.css">
+<!--	<link rel="stylesheet"-->
+<!--				href="css/style.min.css">-->
   <script src="https://unpkg.com/vue"></script>
   <script src="vuelidate/dist/vuelidate.min.js"></script>
+
 	<title>@@title</title>
+
+  <script type="text/javascript">
+    var timestamp = (new Date()).getTime();
+    var headID = document.getElementsByTagName("head")[0];
+    var cssNode = document.createElement('link');
+    cssNode.type = 'text/css';
+    cssNode.rel = 'stylesheet';
+    cssNode.href = 'css/style.min.css' + '?v=' + timestamp;
+    cssNode.media = 'screen';
+    headID.appendChild(cssNode);
+  </script>
 </head>

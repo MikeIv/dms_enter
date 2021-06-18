@@ -61,7 +61,6 @@
         </div>
         <div class="dms_entry__input-pass">
           <input :type="show ? 'text' : 'password'" class="dms_entry__input"  placeholder="Пароль"
-                 v-model="formInfo.pass"
                  required>
           <span class="dms_entry__input-icon" :class="{ active: show }" @click="show = !show"></span>
         </div>
@@ -118,6 +117,8 @@
   }
 
 
+
+
   new Vue({
 
     beforeCreate: function () {
@@ -129,6 +130,7 @@
       title: '',
       type: 'password',
       show: false,
+      styleref: '',
       formInfo: {
         email: '',
         pass: ''
@@ -144,9 +146,10 @@
           this.formInfo.pass = ''
       },
 
-      showInput () {
-        return show = this.show
-      }
+      styleRef(min, max) {
+        return this.styleref = Math.floor(Math.random() * (max - min + 1)) + min;
+        console.log(this.styleref)
+      },
     },
 
   })

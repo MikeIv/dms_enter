@@ -269,8 +269,10 @@
 }
 
 .dms_entry__pass-link {
-  width: 100%;
+  display: flex;
+  justify-content: center;
 
+  margin: 0 auto;
   margin-top: 2.2rem;
   margin-bottom: 2.5rem;
 
@@ -281,7 +283,7 @@
   text-decoration: none;
 
   &:hover {
-    color: $blue;
+    color: $midgray;
   }
 }
 

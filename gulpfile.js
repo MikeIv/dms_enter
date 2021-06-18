@@ -50,3 +50,4 @@ exports.dev_php = gulp.parallel(
 	exports.bs_php,
 	exports.watch
 )
+
