@@ -1,0 +1,108 @@
+.dms_chat-main {
+  position: relative;
+  grid-area: chat_main;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: $white;
+
+  overflow-y: scroll;
+
+  @media screen and (min-width: 480px) {
+    width: 37.3rem;
+
+  }
+
+}
+
+.dms_chat-main__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  width: 100%;
+
+
+  padding-top: 30rem;
+  padding-bottom: 1rem;
+  padding-left: 1.6rem;
+  padding-right: 1.6rem;
+  box-sizing: border-box;
+
+}
+
+.dms_chat-main__item {
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 85%;
+
+  margin-bottom: 1.5rem;
+}
+
+.dms_chat-main__item-in {
+  margin-right: auto;
+}
+
+.dms_chat-main__item-out {
+  margin-left: auto;
+}
+
+.dms_chat-main__item-txt {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
+
+  margin-bottom: 0.5rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  box-sizing: border-box;
+
+  background-color: $lightgray;
+  border-radius: 0.5rem;
+
+  &--out {
+    background-color: $white;
+    border: 1px solid $gray;
+  }
+}
+
+.dms_chat-main__txt {
+  font-size: $s-Fs;
+  font-weight: 300;
+  line-height: $m-Fs;
+  color: $exdarkgray;
+}
+
+.dms_chat-main__txt-icon {
+  position: absolute;
+  bottom: -0.6rem;
+  right: -0.3rem;
+
+  width: 3.5rem;
+  height: 3.5rem;
+
+  fill: $darkgray;
+
+  z-index: 2;
+
+  &.active {
+    fill: $blue;
+  }
+}
+
+.dms_chat-main__date {
+  width: 100%;
+
+  text-align: right;
+  font-size: $xxs-Fs;
+  color: $gray;
+}
